@@ -1,0 +1,114 @@
+/* Typography */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css");
+
+html {
+    font: 11px/1.5 Verdana, Helvetica, sans-serif;
+}
+
+@media (min-width: 400px) {
+    html { font-size: 12px; }
+}
+
+@media (min-width: 800px) {
+    html { font-size: 14px; }
+}
+
+@media (min-width: 1280px) {
+    html { font-size: 16px; }
+}
+
+body, button, table, input, select, option, textarea {
+    font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5em;
+}
+
+p, ul, ol {
+    padding-bottom: 1.5em;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+    padding-bottom: 0;
+}
+
+input[type="text"]:user-invalid,
+input[type="email"]:user-invalid,
+input[type="password"]:user-invalid {
+    border-color: red;
+}
+
+input[type="text"]:user-invalid ~ label,
+input[type="email"]:user-invalid ~ label,
+input[type="password"]:user-invalid ~ label {
+    color: red;
+}
+
+input[type="text"]:user-invalid ~ .error,
+input[type="email"]:user-invalid ~ .error,
+input[type="password"]:user-invalid ~ .error {
+    color: red;
+}
+
+input[type="text"]:user-valid,
+input[type="email"]:user-valid,
+input[type="password"]:user-valid {
+    border-color: #090;
+}
+
+input[type="text"]:user-valid ~ label,
+input[type="email"]:user-valid ~ label,
+input[type="password"]:user-valid ~ label {
+    color: #090;
+}
+
+input[type="text"]:user-valid ~ label::before,
+input[type="email"]:user-valid ~ label::before,
+input[type="password"]:user-valid ~ label::before {
+    display: block;
+    content: '\f00c'; /* a green check mark */
+    font-family: 'Font Awesome 6 Free'; /* needs to be imported! */
+    position: absolute;
+    top: 0;
+    right: 0; /* the input's parent should have position: relative; */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: orange;
+}
+
+input[type="text"]:focus ~ label,
+input[type="email"]:focus ~ label,
+input[type="password"]:focus ~ label {
+    color: darkorange;
+}
+
+input[required] ~ label::after {
+    display: inline;
+    content: '*';
+    color: #c00;
+    padding-left: 0.3em;
+}
+
+input[type="submit"] {
+    border-color: #ccc;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 5px solid #ddd;
+    padding-left: 1.5em;
+    margin: 0 2.5em 1.5em 1.5em;
+}
+
+blockquote p:last-of-type {
+    padding-bottom: 0;
+}
+
+blockquote p.author {
+    text-align: center;
+    font-weight: bold;
+}

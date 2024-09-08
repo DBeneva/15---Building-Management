@@ -1,0 +1,87 @@
+body {
+    padding: 1em;
+}
+
+@media (min-width: 500px) {
+    body {
+        padding: 2em;
+    }
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 0.3em;
+    padding: 2em;
+    margin-bottom: 2em;
+}
+
+fieldset legend {
+    padding: 0 1em;
+    margin-left: -1em;
+}
+
+/* a container for input + label */
+.field {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5em;
+    position: relative;
+}
+
+.field .error {
+    display: none;
+}
+
+input[type="text"]:user-invalid ~ .error,
+input[type="email"]:user-invalid ~ .error,
+input[type="password"]:user-invalid ~ .error {
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    display: block;
+    width: calc(100% - 1em);
+    outline: none;
+    /* when no outline, we MUST change the :focus state*/
+    border: 2px solid #ccc;
+    border-radius: 0.3em;
+    background-color: #fff;
+    padding: 0.5em 0.8em;
+}
+
+/* shadow border on top of an image */
+.image-container {
+    position: relative;
+}
+
+.image-container::after {
+    display: block;
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* shorthand for top, right, bottom and left */
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.3);
+}
+
+.square {
+    width: 5 em;
+    aspect-ratio: 1/1;
+    text-align: center;
+    align-content: center;
+    /* does not work in all browsers */
+}
