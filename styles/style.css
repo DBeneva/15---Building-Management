@@ -1,3 +1,132 @@
 @import './layout.css';
 @import './reset.css';
 @import './typography.css';
+
+body {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 1.2em);
+    font-family: Comfortaa, sans-serif;
+    color: #333;
+}
+
+.header, .footer {
+    padding: 2em;
+    background-color: rgba(0, 128, 128, 0.253);
+    flex-grow: 0;
+    text-align: center;
+}
+
+.header {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+i {
+    margin: 0 1em;
+}
+
+.main {
+    flex-grow: 1;
+    display: flex;
+    height: 100%;
+}
+
+.image-container {
+    flex: 30% 0 0;
+    position: relative;
+}
+
+.image-container img {
+    height: 100%;
+}
+
+.image-container::after {
+    box-shadow: none;
+    background-color: #bbb;
+    width: 9em;
+    height: 100%;
+    position: absolute;
+    left: calc(100% - 4.5em);
+    transform: skew(-10deg);
+}
+
+.content {
+    flex: 70% 1 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 7em;
+}
+
+.responsible-person {
+    position: relative;
+    margin: 1.5em;
+    width: 100%;
+    display: flex;
+    gap: 4em;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.responsible-person-title {
+    color: white;
+}
+
+.buttons {
+    height: 100%;
+    display: flex;
+    gap: 3em;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    width: 22em;
+    padding: 1em 4em;
+    border-radius: 2em;
+    background-color: #eee;
+    border: 3px solid teal;
+    position: relative;
+    text-align: left;
+}
+
+.btn:hover {
+    background-color: rgb(2, 120, 120);
+    color: #eee;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, backgroundd-color 0.3s ease-in-out;
+}
+
+.monthly-fees {
+    width: 30em;
+    font-size: larger;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding: 1.2em 4em;
+}
+
+.fa-user, .fa-sack-dollar, .fa-file-lines {
+    font-size: 2.5rem;
+    position: absolute;
+    left: -1.5em;
+    top: -0.2em;
+    background-color: rgb(2, 120, 120);
+    padding: 0.4em;
+    border-radius: 50%;
+    color: #eee;
+}
+
+.fa-file-lines {
+    font-size: 3.5rem;
+    width: 1.8em;
+    text-align: center;
+}
+
+.footer {
+    font-size: smaller;
+    font-style: italic;
+}
