@@ -6,13 +6,15 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 1.2em);
-    font-family: Comfortaa, sans-serif;
+    min-height: calc(100vh - 1.1em);
+    font-family: 'Neucha', cursive;
+    font-size: 18px;
+    letter-spacing: 0.1em;
     color: #333;
 }
 
 .header, .footer {
-    padding: 2em;
+    padding: 1em;
     background-color: rgba(0, 128, 128, 0.253);
     flex-grow: 0;
     text-align: center;
@@ -20,11 +22,34 @@ body {
 
 .header {
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    flex: 60% 1 0;
+    font-family: 'Neucha', cursive;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.btn.nav-btn {
+    background-color: rgb(2, 120, 120);
+    color: #eee;
+    font-size: 1.5rem;
+    padding: 0.5em;
+}
+
+.btn.nav-btn:hover {
+    background-color: #eee;
+    color: rgb(2, 120, 120);
+    transition: color 0.3s ease-in-out, backgroundd-color 0.3s ease-in-out;
 }
 
 i {
     margin: 0 1em;
+    text-align: center;
 }
 
 .main {
@@ -36,10 +61,9 @@ i {
 .image-container {
     flex: 30% 0 0;
     position: relative;
-}
-
-.image-container img {
-    height: 100%;
+    background-image: url('../images/building.jpg');
+    background-size: 150% 100%;
+    background-repeat: no-repeat;
 }
 
 .image-container::after {
@@ -66,7 +90,6 @@ i {
     width: 100%;
     display: flex;
     gap: 4em;
-    font-style: italic;
     font-weight: bold;
 }
 
@@ -83,13 +106,24 @@ i {
 }
 
 .btn {
-    width: 22em;
-    padding: 1em 4em;
+    padding: 0.8em 4em;
     border-radius: 2em;
     background-color: #eee;
-    border: 3px solid teal;
-    position: relative;
+    border: 3px solid rgb(2, 120, 120);
     text-align: left;
+}
+
+.btn i {
+    font-size: 2.5rem;
+    background-color: rgb(2, 120, 120);
+    padding: 0.4em;
+    border-radius: 50%;
+    color: #eee;
+}
+
+.long-btn {
+    position: relative;
+    width: 22em;
 }
 
 .btn:hover {
@@ -99,34 +133,28 @@ i {
     transition: color 0.3s ease-in-out, backgroundd-color 0.3s ease-in-out;
 }
 
-.monthly-fees {
+.long-btn i {
+    position: absolute;
+    left: -1.5em;
+    top: -0.18em;
+}
+
+.main-btn {
     width: 30em;
     font-size: larger;
     text-transform: uppercase;
     font-weight: bold;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em;
     text-align: center;
     padding: 1.2em 4em;
 }
 
-.fa-user, .fa-sack-dollar, .fa-file-lines {
-    font-size: 2.5rem;
-    position: absolute;
-    left: -1.5em;
-    top: -0.2em;
-    background-color: rgb(2, 120, 120);
-    padding: 0.4em;
-    border-radius: 50%;
-    color: #eee;
-}
-
-.fa-file-lines {
-    font-size: 3.5rem;
+.main-btn i {
+    font-size: 3.6rem;
     width: 1.8em;
     text-align: center;
 }
 
 .footer {
     font-size: smaller;
-    font-style: italic;
 }
